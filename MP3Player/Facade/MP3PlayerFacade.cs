@@ -23,7 +23,8 @@ namespace MP3Player.Facade
         public void Play()
         {
             var song = playlistManager.GetCurrentSong();
-            audioPlayer.Play(song);
+            audioPlayer.SetCurrentSong(song.FilePath);
+            audioPlayer.Play();
         }
 
         public void Pause()
